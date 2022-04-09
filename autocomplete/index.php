@@ -7,7 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>AutoComplete Search Using Bootstrap 4, PHP, PDO - MySQL & Ajax</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
-
+<style>
+    #listm{
+        position: relative;margin-top: -38px;margin-left: 215px;
+    }
+    
+    </style>
 </head>
 
 <body class="bg-info">
@@ -26,7 +31,7 @@
           </div>
         </form>
       </div>
-      <div class="col-md-5" style="position: relative;margin-top: -38px;margin-left: 215px;">
+      <div class="col-md-5" style="" id="listm">
         <div class="list-group" id="show-list">
           <!-- Here autocomplete list will be display -->
         </div>
@@ -36,6 +41,47 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script.js"></script>
+    <script>
+       
+        
+        window.onload = function(){
+            
+   setInterval(function(){ 
+        var element = $('#listm');
+       if ($(window).width() < 1200) {
+    //element.style.marginLeft = "150px";
+            $('#listm').css('marginLeft', '185px');
+}
+  if ($(window).width() < 1030) {
+     
+  //element.style.marginLeft = "190px";
+      $('#listm').css('marginLeft', '190px');
+   
+}
+        if ($(window).width() < 992) {
+    //element.style.marginLeft = "150px";
+            $('#listm').css('marginLeft', '150px');
+}
+        if ($(window).width() < 768) {
+    //element.style.marginLeft = "150px";
+            $('#listm').css('marginLeft', '25px');
+}
+        if ($(window).width() > 1200) {
+    //element.style.marginLeft = "150px";
+            $('#listm').css('marginLeft', '215px');
+}
+       
+              }, 100);  
+            
+            
+            
+            
+  /* var $img = $('.container');
+        
+var paddT = $img.css('margin-left');
+        alert(paddT);*/
+};
+    </script>
 </body>
 
 </html>
