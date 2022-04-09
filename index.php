@@ -186,14 +186,16 @@ if(isset($_SESSION['id'])){
 <script>
 
 $(document).ready(function(){
-    $(window).resize(function() {
+    setInterval(function(){ 
+   
                 if ($(window).width() < 770) {
    $('.rounded-circle').hide();
 }
         if ($(window).width() > 770) {
    $('.rounded-circle').show();
 }
-            });
+           
+    }, 100);  
 
 	var rating_data = 0;
 
